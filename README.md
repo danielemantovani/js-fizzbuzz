@@ -19,7 +19,7 @@ BONUS 2
 
  ## SOLUZIONE
 
- 1.  Stampare in console i numeri da 1 a 100
+ 1. Stampare in console i numeri da 1 a 100 aprendo un ciclo
  2. Sostituire i numeri divisibili per 3 con la parola "Fizz"
  3. Sostituire i numeri divisibili per 5 on la parola "Buzz"
  4. Sostituire i numeri divisibili per 3 per 5 con la parola "FizzBuzz"
