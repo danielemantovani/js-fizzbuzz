@@ -8,22 +8,35 @@ for (let i = 1; i <= 100; i++) {
     console.log(i);
 
     let bgClass;
+    let wordChange;
 
     if (i % 15 === 0) {
         bgClass = "divisible15";
+        console.log("FizzBuzz");
+        wordChange = "FizzBuzz"
     } else if (i % 5 === 0) {
         bgClass = "divisible5";
+        wordChange = "Buzz"
     } else if (i % 3 === 0) {
         bgClass = "divisible3";
-    } else{
-        bgClass
+        wordChange = "Fizz"
+    } else {
+        bgClass;
+        i;
     }
 
 
-    const boxElem = `<div class="box ${bgClass}"> ${i}</div>`
+    // const boxElem = `<div class="box ${bgClass}"> ${i} </div>`
+    // console.log(boxElem);
+    // rowElem.innerHTML += boxElem
+
+    const boxElem = document.createElement("div"); // object
+    boxElem.innerHTML = i;
+    boxElem.innerHTML = wordChange
+    boxElem.classList.add("box");
+    boxElem.classList.add(bgClass);
     console.log(boxElem);
-    rowElem.innerHTML += boxElem
 
-    
+    // stampa dell'elemento in pagina
+    rowElem.append(boxElem);
 }
-
