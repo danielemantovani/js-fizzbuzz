@@ -10,33 +10,33 @@ for (let i = 1; i <= 100; i++) {
     let bgClass;
     let wordChange;
 
-    if (i % 15 === 0) {
-        bgClass = "divisible15";
+    if  ((i % 3 === 0) && (i % 5=== 0)) {
+        bgClass = "divisible35";
+        wordChange = "FizzBuzz";
         console.log("FizzBuzz");
-        wordChange = "FizzBuzz"
-    } else if (i % 5 === 0) {
-        bgClass = "divisible5";
-        wordChange = "Buzz"
     } else if (i % 3 === 0) {
         bgClass = "divisible3";
-        wordChange = "Fizz"
+        wordChange = "Buzz";
+        console.log("Buzz");
+    } else if (i % 5 === 0) {
+        bgClass = "divisible5";
+        wordChange = "Fizz";
+        console.log("Fizz");
     } else {
-        bgClass;
-        i;
+        wordChange = i
     }
 
 
     // const boxElem = `<div class="box ${bgClass}"> ${i} </div>`
     // console.log(boxElem);
     // rowElem.innerHTML += boxElem
-
+    
     const boxElem = document.createElement("div"); // object
-    boxElem.innerHTML = i;
-    boxElem.innerHTML = wordChange
+    boxElem.innerHTML = wordChange;
     boxElem.classList.add("box");
     boxElem.classList.add(bgClass);
     console.log(boxElem);
 
-    // stampa dell'elemento in pagina
+    // per inserire l'elemento nell'elemento genitore in pagina 
     rowElem.append(boxElem);
 }
